@@ -1,4 +1,4 @@
-# Revision history for hw-polysemy
+# Revision history for hw-prelude
 
 ## 0.1.0.0 -- YYYY-mm-dd
 

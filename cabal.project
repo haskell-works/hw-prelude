@@ -1,0 +1,20 @@
+packages: .
+
+allow-newer:
+  base,
+  bytestring,
+
+package testcontainers
+  ghc-options: -XDuplicateRecordFields
+
+package amazonka
+  ghc-options: -XDuplicateRecordFields
+
+package amazonka-s3
+  ghc-options: -XDuplicateRecordFields
+
+package amazonka-sso
+  ghc-options: -XDuplicateRecordFields
+
+package amazonka-sts
+  ghc-options: -XDuplicateRecordFields
