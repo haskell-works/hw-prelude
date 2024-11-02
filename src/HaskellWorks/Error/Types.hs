@@ -1,18 +1,11 @@
-{-# LANGUAGE DeriveGeneric #-}
-
 module HaskellWorks.Error.Types
-  ( GenericError(..),
-    TimedOut(..),
+  ( -- * Error types
+    GenericError(GenericError),
+    RenderedError(RenderedError),
+    TimedOut(TimedOut),
+
+    -- * Type classes
+    ToRenderedError(..),
   ) where
 
-import           HaskellWorks.Prelude
-
-newtype GenericError = GenericError
-  { message :: Text
-  }
-  deriving (Generic, Eq, Show)
-
-newtype TimedOut = TimedOut
-  { message :: Text
-  }
-  deriving (Generic, Eq, Show)
+import           HaskellWorks.Error.Types.All

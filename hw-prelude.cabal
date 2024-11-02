@@ -19,11 +19,14 @@ source-repository head
 
 common base                       { build-depends: base                       >= 4.13       && < 5      }
 
+common aeson                      { build-depends: aeson                                       < 2.3    }
 common async                      { build-depends: async                                       < 2.3    }
 common bytestring                 { build-depends: bytestring                                  < 0.13   }
 common contravariant              { build-depends: contravariant                               < 1.6    }
 common directory                  { build-depends: directory                                   < 1.4    }
 common filepath                   { build-depends: filepath                                    < 1.6    }
+common generic-lens               { build-depends: generic-lens                                < 2.3    }
+common microlens                  { build-depends: microlens                                   < 0.5    }
 common network                    { build-depends: network                                     < 3.3    }
 common process                    { build-depends: process                                     < 1.7    }
 common resourcet                  { build-depends: resourcet                                   < 1.4    }
@@ -63,11 +66,14 @@ common project-config
 
 library
   import:               base, project-config,
+                        aeson,
                         async,
                         bytestring,
                         contravariant,
                         directory,
                         filepath,
+                        generic-lens,
+                        microlens,
                         network,
                         process,
                         resourcet,
@@ -82,6 +88,10 @@ library
                         HaskellWorks.Data.String
                         HaskellWorks.Error
                         HaskellWorks.Error.Types
+                        HaskellWorks.Error.Types.All
+                        HaskellWorks.Error.Types.GenericError
+                        HaskellWorks.Error.Types.RenderedError
+                        HaskellWorks.Error.Types.TimedOut
                         HaskellWorks.IO.Network.NamedPipe
                         HaskellWorks.IO.Network.Port
                         HaskellWorks.IO.Network.Socket
