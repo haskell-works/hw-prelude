@@ -90,7 +90,6 @@ library
                         HaskellWorks.Error.Types
                         HaskellWorks.Error.Types.All
                         HaskellWorks.Error.Types.GenericError
-                        HaskellWorks.Error.Types.RenderedError
                         HaskellWorks.Error.Types.TimedOut
                         HaskellWorks.IO.Network.NamedPipe
                         HaskellWorks.IO.Network.Port
