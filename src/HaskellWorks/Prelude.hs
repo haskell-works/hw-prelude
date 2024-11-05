@@ -165,6 +165,17 @@ module HaskellWorks.Prelude
     IOException,
     IOError,
     SomeException(..),
+
+    onNothing,
+    onNothingM,
+    onLeft,
+    onLeftM,
+    onLeft_,
+    onLeftM_,
+    onMany,
+    onManyM,
+    onMany_,
+    onManyM_,
   ) where
 
 import           Control.Applicative
@@ -196,6 +207,7 @@ import           GHC.Generics
 import           GHC.Num
 import           GHC.Real
 import           GHC.Stack
+import           HaskellWorks.Error
 import           Prelude
 import           System.FilePath
 
