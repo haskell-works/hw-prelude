@@ -1,5 +1,3 @@
-{-# LANGUAGE TypeApplications #-}
-
 module HaskellWorks.IO.Network.Port
   ( randomPort,
     reserveRandomPort,

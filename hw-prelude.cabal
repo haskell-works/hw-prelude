@@ -53,6 +53,7 @@ common project-config
                         FlexibleContexts
                         FlexibleInstances
                         LambdaCase
+                        MultiWayIf
                         NoFieldSelectors
                         NoImplicitPrelude
                         OverloadedRecordDot
