@@ -1,6 +1,6 @@
 cabal-version:          3.4
 name:                   hw-prelude
-version:                0.0.0.4
+version:                0.0.1.0
 synopsis:               Opinionated prelude library
 description:            Opinionated prelude library.
 license:                Apache-2.0
