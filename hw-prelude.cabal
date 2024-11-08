@@ -53,12 +53,15 @@ common project-config
                         FlexibleContexts
                         FlexibleInstances
                         LambdaCase
+                        NoFieldSelectors
                         NoImplicitPrelude
+                        OverloadedRecordDot
                         OverloadedStrings
                         RankNTypes
                         ScopedTypeVariables
                         TypeApplications
                         TypeOperators
+                        TypeSynonymInstances
   ghc-options:          -Wall
 
   if flag(werror)
@@ -88,7 +91,6 @@ library
                         HaskellWorks.Data.String
                         HaskellWorks.Error
                         HaskellWorks.Error.Types
-                        HaskellWorks.Error.Types.All
                         HaskellWorks.Error.Types.GenericError
                         HaskellWorks.Error.Types.TimedOut
                         HaskellWorks.IO.Network.NamedPipe

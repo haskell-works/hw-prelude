@@ -67,7 +67,7 @@ onLeftM_ :: forall e a m. ()
 onLeftM_ f action = onLeft_ f =<< action
 
 -- | Handle the case where a list with many (more than one) elements.
-onMany :: forall a m.()
+onMany :: forall a m. ()
   => Monad m
   => (NonEmpty a -> m (Maybe a))
   -> [a]
@@ -78,7 +78,7 @@ onMany h as = case as of
     (x : xs) -> h (x :| xs)
 
 -- | Handle the case where an effectul function returns a list with many (more than one) elements.
-onManyM :: forall a m.()
+onManyM :: forall a m. ()
   => Monad m
   => (NonEmpty a -> m (Maybe a))
   -> m [a]
@@ -87,7 +87,7 @@ onManyM h f =
   f >>= onMany h
 
 -- | Handle the case where a list with many (more than one) elements.
-onMany_ :: forall a m.()
+onMany_ :: forall a m. ()
   => Monad m
   => m (Maybe a)
   -> [a]
@@ -98,7 +98,7 @@ onMany_ h as = case as of
     _   -> h
 
 -- | Handle the case where an effectul function returns a list with many (more than one) elements.
-onManyM_ :: forall a m.()
+onManyM_ :: forall a m. ()
   => Monad m
   => m (Maybe a)
   -> m [a]

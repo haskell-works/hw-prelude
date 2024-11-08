@@ -1,7 +1,10 @@
-module HaskellWorks.Error.Types
-  ( -- * Error types
-    GenericError(GenericError),
-    TimedOut(TimedOut),
-  ) where
+{-# LANGUAGE DuplicateRecordFields #-}
+{-# LANGUAGE TypeSynonymInstances  #-}
 
-import           HaskellWorks.Error.Types.All
+module HaskellWorks.Error.Types (
+    GenericError (..),
+    TimedOut(..),
+) where
+
+import           HaskellWorks.Error.Types.GenericError
+import           HaskellWorks.Error.Types.TimedOut
