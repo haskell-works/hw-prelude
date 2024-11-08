@@ -96,5 +96,6 @@ library
                         HaskellWorks.IO.Network.Socket
                         HaskellWorks.IO.Process
                         HaskellWorks.Prelude
+                        HaskellWorks.ToText
                         HaskellWorks.Unsafe
   hs-source-dirs:       src
