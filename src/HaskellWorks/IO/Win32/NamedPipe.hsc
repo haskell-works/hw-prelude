@@ -1,8 +1,7 @@
 #include <fcntl.h>
 #include <windows.h>
 
-{-# LANGUAGE CPP                #-}
-{-# LANGUAGE MultiWayIf         #-}
+{-# LANGUAGE CPP #-}
 
 -- | For full details on the Windows named pipes API see
 -- <https://docs.microsoft.com/en-us/windows/desktop/ipc/named-pipes>

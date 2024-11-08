@@ -1,7 +1,3 @@
-{-# LANGUAGE DeriveGeneric         #-}
-{-# LANGUAGE DuplicateRecordFields #-}
-{-# LANGUAGE TypeSynonymInstances  #-}
-
 module HaskellWorks.Error.Types.GenericError (
     GenericError (..),
 ) where

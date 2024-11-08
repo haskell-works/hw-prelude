@@ -1,6 +1,3 @@
-{-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TypeApplications    #-}
-
 module HaskellWorks.IO.Network.Socket
   ( doesSocketExist,
     isPortOpen,
