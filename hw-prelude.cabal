@@ -94,11 +94,15 @@ library
                         HaskellWorks.Error.Types
                         HaskellWorks.Error.Types.GenericError
                         HaskellWorks.Error.Types.TimedOut
+                        HaskellWorks.FilePath
                         HaskellWorks.IO.Network.NamedPipe
                         HaskellWorks.IO.Network.Port
                         HaskellWorks.IO.Network.Socket
                         HaskellWorks.IO.Process
+                        HaskellWorks.OS
                         HaskellWorks.Prelude
+                        HaskellWorks.Stack
+                        HaskellWorks.String
                         HaskellWorks.ToText
                         HaskellWorks.Unsafe
   hs-source-dirs:       src
