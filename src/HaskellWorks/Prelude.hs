@@ -116,7 +116,6 @@ module HaskellWorks.Prelude
     unzip3,
 
     Fractional(..),
-    Floating(..),
     Integral(..),
     Read(..),
     Real(..),
