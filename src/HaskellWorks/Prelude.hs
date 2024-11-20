@@ -6,7 +6,10 @@ module HaskellWorks.Prelude
 
     String,
     Text,
+    LazyText,
     ByteString,
+    LazyByteString,
+
     Int,
     Int8,
     Int16,
@@ -115,10 +118,12 @@ module HaskellWorks.Prelude
     unzip,
     unzip3,
 
+    Read(..),
+    readEither,
+
     Fractional(..),
     Floating(..),
     Integral(..),
-    Read(..),
     Real(..),
     RealFrac(..),
     RealFloat(..),
@@ -140,6 +145,8 @@ module HaskellWorks.Prelude
     denominator,
     (%),
 
+    Identity(..),
+
     Monad(..),
     MonadFail(..),
     MonadPlus(..),
@@ -154,7 +161,14 @@ module HaskellWorks.Prelude
     Foldable(..),
     Traversable(..),
 
+    ExceptT(..),
+    runExceptT,
+
+    Type,
+    Typeable,
+
     IO,
+    Handle,
 
     CallStack,
     HasCallStack,
@@ -181,23 +195,30 @@ module HaskellWorks.Prelude
 import           Control.Applicative
 import           Control.Exception
 import           Control.Monad
+import           Control.Monad.Trans.Except
 import           Data.Bifunctor
 import           Data.Bool
 import           Data.ByteString                      (ByteString)
+import qualified Data.ByteString.Lazy                 as LBS
 import           Data.Char
+import           Data.Data
 import           Data.Either
 import           Data.Eq
 import           Data.Foldable
 import           Data.Function
 import           Data.Functor.Contravariant
 import           Data.Functor.Contravariant.Divisible
+import           Data.Functor.Identity
 import           Data.Int
+import           Data.Kind
 import           Data.Maybe
 import           Data.Monoid
 import           Data.Ord
 import           Data.Semigroup
 import           Data.String
 import           Data.Text                            (Text)
+import qualified Data.Text                            as T
+import qualified Data.Text.Lazy                       as LT
 import           Data.Traversable
 import           Data.Tuple
 import           Data.Void
@@ -210,8 +231,12 @@ import           GHC.Stack
 import           HaskellWorks.Error
 import           Prelude
 import           System.FilePath
+import           System.IO                            (Handle)
+import           Text.Read
 
-import qualified Data.Text                            as T
+type LazyByteString = LBS.ByteString
+
+type LazyText = LT.Text
 
 tshow :: Show a => a -> Text
 tshow = T.pack . show

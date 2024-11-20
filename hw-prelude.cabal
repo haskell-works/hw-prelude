@@ -31,6 +31,7 @@ common network                    { build-depends: network                      
 common process                    { build-depends: process                                     < 1.7    }
 common resourcet                  { build-depends: resourcet                                   < 1.4    }
 common text                       { build-depends: text                                        < 3      }
+common transformers               { build-depends: transformers                                < 0.7    }
 common unliftio                   { build-depends: unliftio                                    < 0.3    }
 
 common hw-prelude                 { build-depends: hw-prelude                                           }
@@ -82,6 +83,7 @@ library
                         process,
                         resourcet,
                         text,
+                        transformers,
                         unliftio,
                         Win32,
 
