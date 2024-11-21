@@ -122,7 +122,6 @@ module HaskellWorks.Prelude
     readEither,
 
     Fractional(..),
-    Floating(..),
     Integral(..),
     Real(..),
     RealFrac(..),
