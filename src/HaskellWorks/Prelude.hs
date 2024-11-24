@@ -71,7 +71,6 @@ module HaskellWorks.Prelude
     (&&),
     (||),
     (.),
-    (</>),
 
     void,
     mapM_,
@@ -102,6 +101,7 @@ module HaskellWorks.Prelude
     (<$!>),
 
     (<$>),
+    (<&>),
 
     (<**>),
     liftA,
@@ -110,13 +110,6 @@ module HaskellWorks.Prelude
     asum,
 
     for_,
-
-    zip,
-    zip3,
-    zipWith,
-    zipWith3,
-    unzip,
-    unzip3,
 
     Read(..),
     readEither,
@@ -148,6 +141,7 @@ module HaskellWorks.Prelude
 
     Monad(..),
     MonadFail(..),
+    MonadIO(..),
     MonadPlus(..),
     Applicative(..),
     Alternative(..),
@@ -194,6 +188,7 @@ module HaskellWorks.Prelude
 import           Control.Applicative
 import           Control.Exception
 import           Control.Monad
+import           Control.Monad.IO.Class
 import           Control.Monad.Trans.Except
 import           Data.Bifunctor
 import           Data.Bool
@@ -205,6 +200,7 @@ import           Data.Either
 import           Data.Eq
 import           Data.Foldable
 import           Data.Function
+import           Data.Functor
 import           Data.Functor.Contravariant
 import           Data.Functor.Contravariant.Divisible
 import           Data.Functor.Identity
@@ -229,7 +225,6 @@ import           GHC.Real
 import           GHC.Stack
 import           HaskellWorks.Error
 import           Prelude
-import           System.FilePath
 import           System.IO                            (Handle)
 import           Text.Read
 

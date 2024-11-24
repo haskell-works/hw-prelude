@@ -92,6 +92,7 @@ library
 
   exposed-modules:      HaskellWorks.Control.Monad
                         HaskellWorks.Data.String
+                        HaskellWorks.Either
                         HaskellWorks.Error
                         HaskellWorks.Error.Types
                         HaskellWorks.Error.Types.GenericError
