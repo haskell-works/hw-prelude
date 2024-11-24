@@ -111,13 +111,6 @@ module HaskellWorks.Prelude
 
     for_,
 
-    zip,
-    zip3,
-    zipWith,
-    zipWith3,
-    unzip,
-    unzip3,
-
     Read(..),
     readEither,
 
