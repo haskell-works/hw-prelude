@@ -107,5 +107,6 @@ library
                         HaskellWorks.Stack
                         HaskellWorks.String
                         HaskellWorks.ToText
+                        HaskellWorks.Tuple
                         HaskellWorks.Unsafe
   hs-source-dirs:       src
