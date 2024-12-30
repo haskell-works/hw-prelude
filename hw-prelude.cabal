@@ -96,7 +96,9 @@ library
                         HaskellWorks.Error
                         HaskellWorks.Error.Types
                         HaskellWorks.Error.Types.GenericError
+                        HaskellWorks.Error.Types.JsonDecodeError
                         HaskellWorks.Error.Types.TimedOut
+                        HaskellWorks.Error.Types.YamlDecodeError
                         HaskellWorks.FilePath
                         HaskellWorks.IO.Network.NamedPipe
                         HaskellWorks.IO.Network.Port
