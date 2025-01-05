@@ -2,6 +2,8 @@ module HaskellWorks.Control.Monad
   ( whileM,
     unlessM,
 
+    whileNothingM,
+
     repeatNUntilM_,
     repeatNWhileM_,
   ) where
@@ -17,6 +19,10 @@ unlessM :: Monad m => m Bool -> m ()
 unlessM act = do
   b <- act
   unless b $ unlessM act
+
+whileNothingM :: Monad m => m (Maybe a) -> m a
+whileNothingM act =
+  act >>= maybe (whileNothingM act) pure
 
 -- | Repeat an action n times until the action returns True.
 repeatNUntilM_ :: ()
