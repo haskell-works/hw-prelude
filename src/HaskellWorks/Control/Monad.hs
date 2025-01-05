@@ -1,9 +1,22 @@
 module HaskellWorks.Control.Monad
-  ( repeatNUntilM_,
+  ( whileM,
+    unlessM,
+
+    repeatNUntilM_,
     repeatNWhileM_,
   ) where
 
 import           HaskellWorks.Prelude
+
+whileM :: Monad m => m Bool -> m ()
+whileM act = do
+  b <- act
+  when b $ whileM act
+
+unlessM :: Monad m => m Bool -> m ()
+unlessM act = do
+  b <- act
+  unless b $ unlessM act
 
 -- | Repeat an action n times until the action returns True.
 repeatNUntilM_ :: ()
