@@ -31,6 +31,7 @@ module HaskellWorks.Prelude
     Num(..),
     Show(..),
     IsString(..),
+    sshow,
     tshow,
 
     bool,
@@ -234,3 +235,6 @@ type LazyText = LT.Text
 
 tshow :: Show a => a -> Text
 tshow = T.pack . show
+
+sshow :: Show a => a -> String
+sshow = show
