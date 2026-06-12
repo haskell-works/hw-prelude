@@ -9,6 +9,7 @@ author:                 John Ky
 maintainer:             newhoggy@gmail.com
 copyright:              2024 John Ky
 category:               Development
+tested-with:            GHC == 9.14.1, GHC == 9.12.4, GHC == 9.10.3, GHC == 9.8.4, GHC == 9.6.7, GHC == 9.4.8
 build-type:             Simple
 extra-doc-files:        CHANGELOG.md
 extra-source-files:     README.md
@@ -25,7 +26,7 @@ common bytestring                 { build-depends: bytestring                   
 common contravariant              { build-depends: contravariant                               < 1.6    }
 common directory                  { build-depends: directory                                   < 1.4    }
 common filepath                   { build-depends: filepath                                    < 1.6    }
-common generic-lens               { build-depends: generic-lens                                < 2.3    }
+common generic-lens               { build-depends: generic-lens                                < 2.4    }
 common microlens                  { build-depends: microlens                                   < 0.5    }
 common network                    { build-depends: network                                     < 3.3    }
 common process                    { build-depends: process                                     < 1.7    }
